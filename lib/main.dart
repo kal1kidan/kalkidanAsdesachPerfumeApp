@@ -2,6 +2,7 @@
 import 'package:sizer/sizer.dart';
 
 import 'presentation/home_screen/home_screen.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,9 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           title: 'kalperfumes',
-          theme: ThemeData(
-            useMaterial3: true,
-            primarySwatch: Colors.pink,
-          ),
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: ThemeMode.light,
           home: const HomeScreen(),
           debugShowCheckedModeBanner: false,
         );
