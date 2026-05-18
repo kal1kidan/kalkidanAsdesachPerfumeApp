@@ -1,7 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import 'presentation/home_screen/home_screen.dart';
+import 'routes/app_routes.dart';
 import 'theme/app_theme.dart';
 
 void main() {
@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.light,
-          home: const HomeScreen(),
+          routes: AppRoutes.routes,
+          initialRoute: AppRoutes.initial,
           debugShowCheckedModeBanner: false,
         );
       },
